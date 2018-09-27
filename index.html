@@ -1,0 +1,52 @@
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.1.4/synaptic.min.js"></script>
+<script src="conf.js"></script>
+<script src="main.js" defer></script>
+<script src="Rocket.js"></script>
+<script src="functions.js"></script>
+<style>
+  body {
+    margin: 0;
+  }
+
+  #demo {
+    background: black;
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/S6hDDACLgiy5260yt/earth-view-from-the-moon-surface-beautiful-space-landscape_bxnii4l9e_thumbnail-full01.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+
+  .dashboard > * {
+    width: 50%;
+    height: 50%;
+  }
+
+  .controls {
+    color: yellow;
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    top: 8px;
+    left: 8px;
+  }
+</style>
+<div class="controls">
+  <label>
+    Normal speed
+    <input type="checkbox" id="render" checked/>
+  </label>
+</div>
+<div class="dashboard">
+  <canvas id="demo"></canvas>
+  <div id="graph-total-cost" class="graph"></div>
+  <div id="graph-velocity" class="graph"></div>
+  <div id="graph-fuel" class="graph"></div>
+</div>
